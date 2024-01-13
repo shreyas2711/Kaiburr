@@ -22,6 +22,7 @@ jobs:
     - name: Build with Maven
       run: |
         cd demo/backend  # Navigate to the backend directory
+        dir  # List contents of the current directory for debugging
         .\mvnw clean install
 
     - name: Build Docker Image
