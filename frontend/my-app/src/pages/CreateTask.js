@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import './CreateTask.css'
 const CreateTask=() => {
 
 const [formData, setFormData] = useState({
@@ -41,25 +41,25 @@ const handleSubmit=(e)=>{
       <form onSubmit={handleSubmit}>
       <div>
           <label htmlFor="candidateName">Candidate Name:</label>
-          <input type="text" id="candidateName" name="candidateName" value={formData.candidateName} onChange={handleInputChange} />
+          <input style={{marginLeft:'1rem'}} className='enter-input' type="text" id="candidateName" name="candidateName" value={formData.candidateName} onChange={handleInputChange} />
         </div>
       <div>
           <label htmlFor="name">Task Name:</label>
-          <input type="text" id="name" name="name" value={formData.name} onChange={handleInputChange} />
+          <input style={{marginLeft:'58px'}} className='enter-input'  type="text" id="name" name="name" value={formData.name} onChange={handleInputChange} />
         </div>
       <div>
           <label htmlFor="assignee">Assignee:</label>
-          <input type="text" id="assignee" name="assignee" value={formData.assignee} onChange={handleInputChange} />
+          <input style={{marginLeft:'71px'}} className='enter-input'  type="text" id="assignee" name="assignee"   value={formData.assignee} onChange={handleInputChange} />
         </div>
       <div>
           <label htmlFor="project">Project:</label>
-          <input type="text" id="project" name="project" value={formData.project} onChange={handleInputChange} />
+          <input style={{marginLeft:'85px'}} className='enter-input'  type="text" id="project" name="project" value={formData.project} onChange={handleInputChange} />
         </div>
       <div>
           <label htmlFor="startTime">Start Time:</label>
-          <input type="text" id="startTime" name="startTime" value={formData.startTime} onChange={handleInputChange} />
+          <input style={{marginLeft:'63px'}} className='enter-input'  type="text" id="startTime" name="startTime" value={formData.startTime} onChange={handleInputChange} />
         </div>
-        <button type="submit" onClick={handleSubmit}>Submit</button>
+        <button className='submit-class' type="submit" onClick={handleSubmit}>Submit</button>
         </form>
 
       </div>

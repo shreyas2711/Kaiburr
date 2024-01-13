@@ -29,7 +29,8 @@ export default function Home() {
     };
   
     console.log(data);
-    console.log('Search results:', searchResults);
+    // console.log('Search results:', searchResults);
+
   
     return (
       <div className="container">
@@ -39,6 +40,7 @@ export default function Home() {
             searchResults.tasks.map((task) => (
               <div className="post-elements" key={task.id}>
                 <div className="posts">
+                <p>Candidate Name: {task.candidateName}</p>
                   <p>Task name: {task.name}</p>
                   <p>Task id: {task.id}</p>
                   <p>Assignee: {task.assignee}</p>
@@ -54,6 +56,7 @@ export default function Home() {
             data.map((task) => (
               <div className="post-elements" key={task.id}>
                 <div className="posts">
+                <p>Candidate Name: {task.candidateName}</p>
                   <p>Task name: {task.name}</p>
                   <p>Task id: {task.id}</p>
                   <p>Assignee: {task.assignee}</p>

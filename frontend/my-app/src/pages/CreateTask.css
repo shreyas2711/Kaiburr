@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+form{
+    padding: 11rem;
+    margin-left: 23rem;
+}
+
+.enter-input{
+    margin-top: 1rem;
+}
+
+.submit-class{
+    margin-top: 2rem;
+    margin-left: 8rem;
+    height: 38px;
+    width: 66px;
+    border-radius: 4px;
+    background: #2f4e9c;
+    color: white;
+}

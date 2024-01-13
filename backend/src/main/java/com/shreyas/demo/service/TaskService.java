@@ -52,6 +52,7 @@ public class TaskService {
             taskToUpdate.setassignee(updatedTask.getassignee());
             taskToUpdate.setproject(updatedTask.getproject());
             taskToUpdate.setStartTime(updatedTask.getstartTime());
+            taskToUpdate.setname(updatedTask.getname());
 
             return taskRepository.save(taskToUpdate);
         }
