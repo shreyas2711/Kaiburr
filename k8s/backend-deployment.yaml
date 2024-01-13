@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: silvermelon/my-spring-backend:v2.0  # Update this line
+        image: silvermelon/my-spring-backend:v3.0  # Update this line to your new version
         ports:
         - containerPort: 9090
         env:
