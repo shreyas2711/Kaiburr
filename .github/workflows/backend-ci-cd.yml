@@ -27,6 +27,6 @@ jobs:
     - name: Build Docker Image
       run: |
         cd backend
-        docker build -t silvermoon/my-spring-backend:v3.0 .
+        docker build -t silvermelon/my-spring-backend:v3.0 .
         docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-        docker push silvermoon/my-spring-backend:v3.0
+        docker push silvermelon/my-spring-backend:v3.0
