@@ -86,7 +86,6 @@ public class Task {
 
      
     public Task() {
-        // Generate a unique ID when a new Task object is created
         this.id = generateUniqueId();
     }
     

@@ -52,8 +52,6 @@ public class TaskController {
 
     @PostMapping("/create")
 public ResponseEntity<Task> createTask(@RequestBody Task task) {
-    // Assuming you have a unique way of generating ids (e.g., UUID)
- // Implement a method to generate a unique id
     task.setcandidateName(task.getcandidateName());
 
     Task createdTask = taskService.createTask(task);
