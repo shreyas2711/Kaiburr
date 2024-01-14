@@ -25,7 +25,7 @@ This task involves implementing a Java application providing a REST API for mana
 
 ## MongoDB Setup
 
-Use MongoDB atlas to connect your JAVA API with atlas cluster. Use mongo uri string provided by atlas and include them in your application.properties file with the correct user credentials.
+Use MongoDB atlas to connect your JAVA API with atlas cluster. Use mongo uri string provided by atlas and include them in your "application.properties" file with the correct user credentials.
 
 
 ## Screenshots
@@ -52,13 +52,9 @@ Use MongoDB atlas to connect your JAVA API with atlas cluster. Use mongo uri str
 4. Get tasks by wrong id(id doesn't exist in database).
 
 <img src="./Images/4.JPG">
-<br>
-
 <p align="center">Here the task with wrong task id API request gave 404 error.</p>
 
 <br>
-
-
 
 
 5. Get tasks by taskname (GET Request).
@@ -276,7 +272,7 @@ This task involves creating CI/CD pipeline for for the backend server.
 
 
 ## Author: 
-- ## [Shreyas Kamath](https://github.com/shreyas2711)
+- [Shreyas Kamath](https://github.com/shreyas2711)
 
 
 
