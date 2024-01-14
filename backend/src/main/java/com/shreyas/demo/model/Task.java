@@ -14,10 +14,10 @@ public class Task {
     @Id
     private String id;                  
     private String candidateName;
-    private String name;           //             //
-    private String assignee;        //
+    private String name;           
+    private String assignee;        
     private String project;         
-    private LocalDateTime startTime;   //
+    private LocalDateTime startTime;  
     private String candidateNameProperty;
 
     
@@ -106,8 +106,6 @@ public class Task {
      
     
     private String generateUniqueId() {
-        // Logic to generate a unique ID, you can use UUID or any other strategy
-        // For simplicity, let's use a simple timestamp-based ID
         return Long.toString(System.currentTimeMillis());
     }
 
