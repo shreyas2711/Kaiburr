@@ -1,8 +1,6 @@
 package com.shreyas.demo.service;
 
 
-// import org.slf4j.Logger;
-// import org.slf4j.LoggerFactory;
 import com.shreyas.demo.exception.ResourceNotFoundException;
 import com.shreyas.demo.model.Task;
 import com.shreyas.demo.repository.TaskRepository;
@@ -12,9 +10,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+// Service functions
+
 @Service
 public class TaskService {
-    // private static final Logger log = LoggerFactory.getLogger(TaskService.class);
+
     @Autowired
     private TaskRepository taskRepository;
 

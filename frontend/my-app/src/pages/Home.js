@@ -6,15 +6,15 @@ export default function Home() {
     const [searchResults, setSearchResults] = useState([]);
     const [data, setData] = useState([]);
   
-    useEffect(() => {
-      fetch('http://localhost:9090/tasks')
+    useEffect(() => {                                                              // Trigger GET tasks
+      fetch('http://localhost:9091/tasks')
         .then((response) => response.json())
         .then((data) => setData(data))
         .catch((error) => console.error('Error fetching the data!', error));
     }, []);
   
     const handleDelete = (taskId) => {
-      fetch(`http://localhost:9090/tasks/delete/${taskId}`, {
+      fetch(`http://localhost:9091/tasks/delete/${taskId}`, {                    // Trigger DELETE tasks
         method: 'DELETE',
         headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
       })
@@ -33,6 +33,7 @@ export default function Home() {
 
   
     return (
+         /* Show tasks based on results*/
       <div className="container">
         <SearchBar setSearchResults={setSearchResults} />
         <div className="task-post">
@@ -40,7 +41,7 @@ export default function Home() {
             searchResults.tasks.map((task) => (
               <div className="post-elements" key={task.id}>
                 <div className="posts">
-                <p>Candidate Name: {task.candidateName}</p>
+                <p>Candidate Name: {task.candidateName}</p>                 
                   <p>Task name: {task.name}</p>
                   <p>Task id: {task.id}</p>
                   <p>Assignee: {task.assignee}</p>
@@ -52,6 +53,7 @@ export default function Home() {
                 </div>
               </div>
             ))
+               /* Else show all tasks */
           ) : (
             data.map((task) => (
               <div className="post-elements" key={task.id}>
@@ -62,8 +64,7 @@ export default function Home() {
                   <p>Assignee: {task.assignee}</p>
                   <p>Task project: {task.project}</p>
                   <p>StartTime: {task.startTime}</p>
-                  {/* Uncomment and handle Property Name as needed */}
-                  {/* <p>Property Name: {task.can}</p> */}
+  
                   <button onClick={() => handleDelete(task.id)}>&#128465;</button>
                 </div>
               </div>

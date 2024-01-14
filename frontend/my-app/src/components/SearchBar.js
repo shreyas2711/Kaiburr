@@ -8,7 +8,7 @@ const SearchBar = ({setSearchResults}) => {
     }
 
     const ButtonSearch = () => {
-        fetch(`http://localhost:9090/tasks/byname/${query}`, {
+        fetch(`http://localhost:9091/tasks/byname/${query}`, {
             method: 'GET',
         })
         .then(response => response.json())
