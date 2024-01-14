@@ -1,3 +1,15 @@
+# Working project video:
+
+I made a video on the working of our project. Here is the link:
+
+<br>
+<br>  
+
+## [Click here to watch video of working project](https://youtu.be/kZoc7jls01Y)
+<br>
+<br>
+
+
 
 # Task 1: Java REST API
 
@@ -125,7 +137,7 @@ Here, replace "your-username" with your actual Dockerhub username.
 <br>
 
 
-3. In our case we I did not create seperate cluster for MongoDb since I used atlas and atlas manages clusters on its won.
+3. In our case I did not create seperate cluster for MongoDb since I used atlas and atlas manages clusters on its won.
 
 <br>
 
@@ -137,6 +149,17 @@ Here, replace "your-username" with your actual Dockerhub username.
 ```
 
 <br>
+
+5. Run your application on Kubernetes.
+
+```bash
+kubectl port-forward <your-pod-name> 31185:9090
+```
+<br>
+<br>
+
+6. Navigate to the application on the browser on http://localhost:31185/tasks.
+
 
 
 ## Screenshots
@@ -235,6 +258,9 @@ This task involves creating CI/CD pipeline for for the backend server.
 
 3. Use Github secret for the repository to store DOCKERHUB_USERNAME and DOCKERHUB_PASSWORD so that while running your workflow using Github actions, Github can directly access the protected credentials of Your Docker hub.
 
+
+4. After pushing changes to your project,go to Github actions in your repository. You can see the workflow of the project in jobs section.
+
 <br>
 
 
@@ -249,9 +275,6 @@ This task involves creating CI/CD pipeline for for the backend server.
 <br>
 <br>
 <br>
-
-
-# Working project video:
 
 
 
