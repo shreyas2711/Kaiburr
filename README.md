@@ -246,6 +246,12 @@ This task involves creating CI/CD pipeline for for the backend server.
 
 <img src="./Images/51.JPG">
 
+<br>
+<br>
+<br>
+
+
+# Working project video:
 
 
 
