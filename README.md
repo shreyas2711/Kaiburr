@@ -3,9 +3,9 @@
 I made a video on the working of our project. Here is the link:
 
 <br>
-<br>  
 
-## [Click here to watch video of working project](https://youtu.be/kZoc7jls01Y)
+
+ ## [Click here to watch video of working project](https://youtu.be/kZoc7jls01Y)
 <br>
 <br>
 
@@ -23,7 +23,7 @@ This task involves implementing a Java application providing a REST API for mana
 - DELETE/tasks/{id}: Deletes a task based on the provided task ID.
 - GET /tasks/findByName/{name}: Finds tasks by name. Returns one or more tasks containing the specified string in the name or 404 if nothing is found.
 
-## Mongo Setup
+## MongoDB Setup
 
 Use MongoDB atlas to connect your JAVA API with atlas cluster. Use mongo uri string provided by atlas and include them in your application.properties file with the correct user credentials.
 
@@ -41,23 +41,23 @@ Use MongoDB atlas to connect your JAVA API with atlas cluster. Use mongo uri str
 <img src="./Images/2.JPG">
 
 <br>
-<br>
+
 
 3. Get tasks by id (GET Request).
 
 <img src="./Images/3.JPG">
 
 <br>
-<br>
 
 4. Get tasks by wrong id(id doesn't exist in database).
 
 <img src="./Images/4.JPG">
 <br>
+
 <p align="center">Here the task with wrong task id API request gave 404 error.</p>
 
 <br>
-<br>
+
 
 
 
@@ -66,11 +66,10 @@ Use MongoDB atlas to connect your JAVA API with atlas cluster. Use mongo uri str
 <img src="./Images/6.JPG">
 
 <br>
-<br>
 
 <img src="./Images/8.JPG">
-<p align="center">Here we GET endpoint which is based on taskname which doesn't exist, hence giving 404 error.</p>
-<br>
+<p align="center">Here we send GET request to an endpoint based on taskname which doesn't exist.Hence it gives 404 error.</p>
+
 <br>
 
 
@@ -124,12 +123,12 @@ Deploy JAVA application(Spring boot application) to Kubernetes.
 ```bash
   docker build -t your-username/my-spring-backend:<tagname> .
 ```
-<br>
+
 Here, replace "your-username" with your actual Dockerhub username.
 
 <br>
 
-2. Create Kubernetes manifests(Deployment and Service).
+2. Create Kubernetes manifests(Deployment and Service) and run this command after creating them.
 
 ```bash
   kubectl apply -f backend-deployment.yaml
@@ -137,11 +136,11 @@ Here, replace "your-username" with your actual Dockerhub username.
 <br>
 
 
-3. In our case I did not create seperate cluster for MongoDb since I used atlas and atlas manages clusters on its won.
+3. In this projct I did not create seperate cluster for MongoDb since I used atlas and atlas manages clusters on its own.
 
 <br>
 
-4. Verify deployment
+4. Verify whether your application is deployed on kubernetes.
 
 ```bash
   kubectl get pods
@@ -156,9 +155,8 @@ Here, replace "your-username" with your actual Dockerhub username.
 kubectl port-forward <your-pod-name> 31185:9090
 ```
 <br>
-<br>
 
-6. Navigate to the application on the browser on http://localhost:31185/tasks.
+6. Navigate to the application on the browser: http://localhost:31185/tasks.
 
 
 
@@ -179,7 +177,7 @@ kubectl port-forward <your-pod-name> 31185:9090
 <br>
 
 
-3. curl command to retrieve data from server.
+3. curl command to retrieve data from the server.
 
 <img src="./Images/39.JPG">
 
@@ -188,7 +186,7 @@ kubectl port-forward <your-pod-name> 31185:9090
 
 
 
-## Task 3: Web UI Forms
+# Task 3: Web UI Forms
 
 1. Frontend was built using React.js
 
@@ -205,7 +203,7 @@ kubectl port-forward <your-pod-name> 31185:9090
 <br>
 
 
-3. Create a task form page to create tasks front the frontend.
+3. Create a task form page to create tasks from the frontend.
 
 <img src="./Images/42.JPG">
 
@@ -247,16 +245,16 @@ kubectl port-forward <your-pod-name> 31185:9090
 
 
 
-## Task 4: CI-CD Pipeline
+# Task 4: CI-CD Pipeline
 
 This task involves creating CI/CD pipeline for for the backend server.
 
 
 1. Create workflow file for your pipeline(backend-ci-cd.yml).
 
-2. Include DOCKERHUB_USERNAME and DOCKERHUB_PASSWORD in workflow file
+2. Include DOCKERHUB_USERNAME and DOCKERHUB_PASSWORD in workflow file.
 
-3. Use Github secret for the repository to store DOCKERHUB_USERNAME and DOCKERHUB_PASSWORD so that while running your workflow using Github actions, Github can directly access the protected credentials of Your Docker hub.
+3. Use Github secret for the repository to store DOCKERHUB_USERNAME and DOCKERHUB_PASSWORD so that while running your workflow using Github actions, Github can directly access the protected credentials of your Docker hub.
 
 
 4. After pushing changes to your project,go to Github actions in your repository. You can see the workflow of the project in jobs section.
@@ -277,7 +275,8 @@ This task involves creating CI/CD pipeline for for the backend server.
 <br>
 
 
-
+## Author: 
+- ## [Shreyas Kamath](https://github.com/shreyas2711)
 
 
 
